@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My EC2 Web App</title>
+</head>
+<body>
+    <h1>Hello from EC2!</h1>
+    <p>This is a simple HTML web page hosted on an EC2 instance.</p>
+</body>
+</html>
+
