@@ -24,6 +24,3 @@ app.listen(port, () => {
     console.log(`App running on port ${port}`);
 });
 
-app.get('/', (req, res) => {
-  res.send("This is VERSION 2 of the app!");
-});
