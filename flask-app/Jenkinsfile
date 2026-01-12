@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Lavanya-20-git/Cloud.git'
+                git(branch: 'main',
+                    url: 'https://github.com/Lavanya-20-git/Cloud.git',
+                    credentialsId: 'ubuntuaccess')
             }
         }
 
@@ -23,15 +25,11 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    // Stop old container if exists
                     sh "docker stop flask-app || true"
                     sh "docker rm flask-app || true"
-
-                    // Run new container
                     sh "docker run -d -p 80:5000 --name flask-app ${DOCKER_IMAGE}"
                 }
             }
         }
     }
 }
-
