@@ -28,7 +28,7 @@ pipeline {
                     sh "docker rm flask-app || true"
 
                     // Run new container
-                    sh "docker run -d -p 5000:5000 --name flask-app ${DOCKER_IMAGE}"
+                    sh "docker run -d -p 80:5000 --name flask-app ${DOCKER_IMAGE}"
                 }
             }
         }
